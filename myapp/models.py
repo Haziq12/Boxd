@@ -1,4 +1,5 @@
 #models 
+from re import S
 from myapp import db, login_manager
 from werkzeug.security import generate_password_hash, check_password_hash
 #allows to set up isAuthenticate etc 
@@ -33,3 +34,28 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return f"Username {self.username}"
 
+
+class Item(db.Model):
+    __tablename__='items'
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    itemName = db.Column(db.String(), nullable=False)
+    itemDescription = db.Column(db.String(), nullable=False)
+    price = db.Column(db.Integer, nullable=False)
+    condition = db.Column(db.String(), nullable=False)
+    size = db.Column(db.String(), nullable=False)
+    contactInfo = db.Column(db.String(), nullable=False)
+    category = db.Column(db.String(), nullable=False)
+
+    def __init__(self, itemName, itemDescription, price, condition, size, contactInfo, category, user_id):
+        self.itemName = itemName
+        self.itemDescription = itemDescription
+        self.price = price
+        self.condition = condition
+        self.size = size
+        self.contactInfo = contactInfo
+        self.category = category
+        self.user_id = user_id
+
+    def __repr__(self):
+        return f'Item ID: {self.id} -- Date: {self.date} -- itemName: {self.itemName} -- itemDescription: {self.itemDescription} -- price: {self.price} -- condition: {self.condition} -- size: {self.size} -- contactInfo: {self.contactInfo} -- category: {self.category}'
