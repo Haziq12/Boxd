@@ -42,6 +42,7 @@ class RegistrationForm(FlaskForm):
 class UpdateUserForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()]) 
     username = StringField('Username', validators=[DataRequired()])
+    country = StringField('Country', validators=[DataRequired()])
     submit = SubmitField('Update')
 
     def check_email(self, field):

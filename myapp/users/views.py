@@ -61,11 +61,13 @@ def account():
     if form.validate_on_submit(): 
         current_user.username = form.username.data
         current_user.email = form.email.data
+        current_user.country = form.country.data 
         db.session.commit()
         flash('User account updated!!')
         return redirect(url_for('users.account'))
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.email.data = current_user.email
+        form.country.data = current_user.country 
 
     return render_template('account.html', form=form)
