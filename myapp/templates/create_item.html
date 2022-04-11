@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+      <form class="form-group" method="POST">
+          {{form.hidden_tag()}}
+
+          <div class="form-group">
+              {{form.itemName.label(class="form-control-label")}}
+              {{form.itemName(class="form-control form-control-lg")}}
+          </div>
+          <div class="form-group">
+            {{form.price.label(class="form-control-label")}}
+            {{form.price(class="form-control form-control-lg")}}
+        </div>
+        <div class="form-group">
+          {{form.condition.label(class="form-control-label")}}
+          {{form.condition(class="form-control form-control-lg")}}
+      </div>
+      
+          <div class="form-group">
+            {{form.itemDescription.label(class="form-control-label")}}
+            {{form.itemDescription(class="form-control form-control-lg")}}
+        </div>
+        <div class="form-group">
+          {{form.contactInfo.label(class="form-control-label")}}
+          {{form.contactInfo(class="form-control form-control-lg")}}
+      </div>
+      
+        <div class="form-group">
+            {{form.submit(class="btn btn-outline-info")}}
+        </div>
+      </form>
+    </div>
+{% endblock %}
+
+
+
+<!-- <div class="form-group">
+  {{form.size.label(class="form-control-label")}}
+  {{form.size(class="form-control form-control-lg")}}
+</div> -->
+
+
+<!-- <div class="form-group">
+        {{form.category.label(class="form-control-label")}}
+        {{form.category(class="form-control form-control-lg")}}
+    </div> -->

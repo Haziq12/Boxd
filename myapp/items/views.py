@@ -12,7 +12,7 @@ items = Blueprint('items', __name__)
 def create_item():
   form = ItemForm()
   if form.validate_on_submit():
-    item = Item(itemName=form.itemName.data, itemDescription=form.itemDescription.data, price=form.price.data, condition=form.condition.data, size=form.size.data, contactInfo=form.contactInfo.data, category=form.category.data)
+    item = Item(itemName=form.itemName.data, itemDescription=form.itemDescription.data, price=form.price.data, condition=form.condition.data, size=form.size.data, contactInfo=form.contactInfo.data, category=form.category.data, user_id=current_user.id)
     db.session.add(item)
     db.session.commit()
     flash('ITEM CREATED') 
