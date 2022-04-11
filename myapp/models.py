@@ -17,11 +17,13 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(64), unique=True, index=True)
     username = db.Column(db.String(64), unique=True, index=True)
+    country = db.Column(db.String(64))
     password_hash = db.Column(db.String(128))
 
-    def __init__(self, email, username, password):
+    def __init__(self, email, username, password, country):
         self.email = email
         self.username = username
+        self.country = country
         self.password_hash = generate_password_hash(password)
 
 #going to use this in our login view 
