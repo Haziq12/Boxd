@@ -57,3 +57,7 @@ app.register_blueprint(users)
 # Linking and registering items views Blueprint
 from myapp.items.views import items
 app.register_blueprint(items)
+
+
+from myapp.core.views import core 
+app.register_blueprint(core)
