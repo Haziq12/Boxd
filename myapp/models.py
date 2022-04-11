@@ -20,6 +20,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(64), unique=True, index=True)
     country = db.Column(db.String(64))
     password_hash = db.Column(db.String(128))
+    items = db.relationship('Item', backref='author', lazy=True)
 
     def __init__(self, email, username, password, country):
         self.email = email
@@ -46,6 +47,7 @@ class Item(db.Model):
     size = db.Column(db.String(), nullable=False)
     contactInfo = db.Column(db.String(), nullable=False)
     category = db.Column(db.String(), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
     def __init__(self, itemName, itemDescription, price, condition, size, contactInfo, category, user_id):
         self.itemName = itemName
