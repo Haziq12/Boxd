@@ -2,6 +2,7 @@
 
 # forms related imports
 from ast import Pass
+from wsgiref.validate import validator
 from click import password_option
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
@@ -21,6 +22,7 @@ class LoginForm(FlaskForm):
 class RegistrationForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     username = StringField('Username', validators=[DataRequired()])
+    country = StringField('Country', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired(), EqualTo('pass_confirm', message='Passwords must match!')])
     # we make sure password is equal to pass confirm - so 
     pass_confirm = PasswordField('Confirm Password', validators=[DataRequired()])
