@@ -8,7 +8,7 @@
         </div>
      {% for item in items.items %}
     <h2>
-        <a href="{{url_for('items.item', items_id=item.id)}}">{{item.itemName}}</a>
+        <a href="{{url_for('items.item', item_id=item.id)}}">{{item.itemName}}</a>
     </h2>
     <p>{{item.price}}</p>
     <p>{{item.condition}}</p>

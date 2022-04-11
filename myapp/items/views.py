@@ -3,6 +3,7 @@ from flask_login import current_user, login_required
 from myapp import db 
 from myapp.models import Item
 from myapp.items.forms import ItemForm
+from myapp.users.views import login
 
 items = Blueprint('items', __name__)
 
@@ -56,3 +57,17 @@ def update(item_id):
     form.category.data=item.category
 
   return render_template('create_item.html', title='Updating', form=form) 
+
+
+@items.route('/<int:item_id>/delete', methods=['GET', 'POST'])
+@login_required
+def delete_item(item_id):
+
+  item = Item.query.get_or_404(item_id)
+  if item.author != current_user:
+    abort(403)
+
+  db.session.delete(item)
+  db.session.commit()
+  flash('Item deleted')
+  return redirect(url_for('core.index'))
