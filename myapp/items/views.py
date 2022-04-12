@@ -22,8 +22,9 @@ def create_item():
 
 @items.route('/<int:item_id>') 
 def item(item_id):
+  print('route hit')
   item = Item.query.get_or_404(item_id)
-  return render_template('item.html', date=item.date, itemName=item.itemName, itemDescription=item.itemDescription, price=item.price, condition=item.condition, size=item.size, contactInfo=item.contactInfo, category=item.category)
+  return render_template('item.html', date=item.date, itemName=item.itemName, itemDescription=item.itemDescription, price=item.price, condition=item.condition, size=item.size, contactInfo=item.contactInfo, category=item.category, item=item)
 
 @items.route('/<int:item_id>/update', methods=['GET', 'POST'])
 @login_required
