@@ -44,9 +44,9 @@ class Item(db.Model):
     itemDescription = db.Column(db.String(), nullable=False)
     price = db.Column(db.Integer, nullable=False)
     condition = db.Column(db.String(), nullable=False)
-    size = db.Column(db.String(), nullable=False)
+    size = db.Column(db.String(), nullable=True)
     contactInfo = db.Column(db.String(), nullable=False)
-    category = db.Column(db.String(), nullable=False)
+    category = db.Column(db.String(), nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
     def __init__(self, itemName, itemDescription, price, condition, size, contactInfo, category, user_id):

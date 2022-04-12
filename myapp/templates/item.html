@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>{{ item.itemName }}</h1>
+  <h2>Created by: {{item.author.username}}</h2>
+  <h3>Published: {{ item.date.strftime('%B %d, %Y') }}</h3>
+  <p>{{item.itemDescription}}</p>
+   {% if item.author == current_user %}
+     <div>
+       <a class="btn btn-secondary" href="{{ url_for('items.update', item_id=item.id) }}">Update</a>
+       <br>
+       <form action="{{ url_for('items.item', item_id=item.id) }}" method="POST">
+        <input class="btn btn-danger" type="submit" value="Delete">
+      </form>
+     </div>
+   {% endif %}
+</div>
+{% endblock content %}

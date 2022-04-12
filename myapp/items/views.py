@@ -20,7 +20,7 @@ def create_item():
     return redirect(url_for('core.index'))
   return render_template('create_item.html', form=form)
 
-@items.route('/<int:item_id>')
+@items.route('/<int:item_id>') 
 def item(item_id):
   item = Item.query.get_or_404(item_id)
   return render_template('item.html', date=item.date, itemName=item.itemName, itemDescription=item.itemDescription, price=item.price, condition=item.condition, size=item.size, contactInfo=item.contactInfo, category=item.category)

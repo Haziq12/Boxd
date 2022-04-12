@@ -16,10 +16,10 @@
     <br>
     <p>{{item.itemDescription}}</p>
     <br>
-    By: <a href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}</a>
+    By: <a href="{{url_for('users.user_items', username=item.author.username)}}">{{item.author.username}}</a>
     <p>{{item.contactInfo}}</p>
     <p class="text-muted">
-      Created On: {{post.date.strftime("%y-%m-%d")}}
+      Created On: {{item.date.strftime("%y-%m-%d")}}
   </p>
     {% endfor %}
     </div>
