@@ -19,7 +19,7 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 # set up connection to db
 # app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost:5432/project4"
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('postgres://inzmwkizqctall:6b6a7cab0e8c260b93a50842817bdac736d45ddc57aceb3f7128d87d7138a1a0@ec2-52-21-136-176.compute-1.amazonaws.com:5432/d4rs0juolr9dsh').replace("://", "ql://", 1)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL').replace("://", "ql://", 1)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
