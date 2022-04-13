@@ -5,6 +5,8 @@
     <div class="heading">
         <h1>For Sale</h1>
     </div>
+    
+    <div class="banner"></div>
 
     <section class="card-layout">
         {% for item in items.items %}
@@ -14,8 +16,8 @@
                         <a class="card-title" href="{{url_for('items.item', item_id=item.id)}}">{{item.itemName}}</a>
                     </h2>
                     <h4 class="price">${{item.price}}</h4>
-                    <p class="date" >Published on: {{item.date.strftime('%Y - %m - %d')}}</p>
                     <a class="author" href="{{url_for('users.user_items', username=item.author.username)}}">By: {{item.author.username}}</a><br>
+                    <p class="date" >{{item.date.strftime('%Y - %m - %d')}}</p>
                     <a class="details-btn" href="{{url_for('items.item', item_id=item.id)}}">See Item Details</a>
                 </div>
             </div>
