@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 <link rel="stylesheet" href="{{url_for('static', filename='./styles/index.css')}}" />
+
     <div class="heading">
         <h1>For Sale</h1>
     </div>
-    <div class="container">
+
+    <section class="card-layout">
         {% for item in items.items %}
             <div class="card">
                 <div class="card-body">
@@ -17,8 +19,8 @@
                     <a class="details-btn" href="{{url_for('items.item', item_id=item.id)}}">See Item Details</a>
                 </div>
             </div>
-        {% endfor %}
-    </div>
+            {% endfor %}
+    </section>
 
     <nav aria-label="Page Navigation example">
         <ul class="pagination">
