@@ -1,9 +1,22 @@
-.container {  display: grid;
+.container {  
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
-  grid-auto-flow: row;
   grid-template-areas:
-    ". ."
-    ". .";
+    "first second"
+    "third fourth"
+    "fifth sixth";
+}
+
+.container > main{
+  grid-area: second;
+}
+
+.container >  article{
+  grid-area: fourth;
+}
+
+.container > .buttons {
+  grid-area: sixth;
 }
