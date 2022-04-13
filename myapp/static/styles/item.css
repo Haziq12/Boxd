@@ -17,6 +17,10 @@
   grid-area: fourth;
 }
 
-.container > .buttons {
+section {
   grid-area: sixth;
+}
+
+form {
+  display: inline;
 }
