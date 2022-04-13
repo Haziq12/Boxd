@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="jumbotron">
-  <h1>{{ item.itemName }}</h1>
-  <h2>Created by: {{item.author.username}}</h2>
+  <h2>Sold by: {{item.author.username}}</h2>
   <h3>Published: {{ item.date.strftime('%B %d, %Y') }}</h3>
-  <p>{{item.itemDescription}}</p>
+  <h1>{{ item.itemName }}</h1>
+  <p>Category: {{item.category}}</p>
+  <h3>${{item.price}}</h3>
+  <p>Condition: {{item.condition}}</p>
+  <p>Size: {{item.size}}</p>
+  <p>Description: {{item.itemDescription}}</p>
+  <p>Buying Info: {{item.contactIfo}}</p>
    {% if item.author == current_user %}
      <div>
        <a class="btn btn-secondary" href="{{ url_for('items.update', item_id=item.id) }}">Update</a>

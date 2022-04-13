@@ -72,8 +72,7 @@ h1 {
 
 .page-item {
   list-style: none;
-  border: 1px solid;
-  border-radius: 6px;
+  border-radius: 3px;
   background: #cf8d8d;
   padding: 7px;
 }
