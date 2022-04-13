@@ -19,9 +19,11 @@ body {
   margin: 0;
 }
 
-
+h1 {
+  margin: 0px;
+}
 .heading {
-  text-align: center;
+  text-align: left;
 }
 
 .card-layout {
@@ -62,8 +64,9 @@ body {
 
 .banner {
   background-image: 
-  url(banner.jpeg);
+  url(banner.png);
   height: 350px;
   width: 100%;
+  margin-top: 0px;
 }
 
