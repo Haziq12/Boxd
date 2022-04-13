@@ -1,29 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="jumbotron">
+<link rel="stylesheet" href="{{url_for('static', filename='./styles/index.css')}}" />
+    <div class="heading">
         <h1>For Sale</h1>
     </div>
     <div class="container">
         {% for item in items.items %}
             <div class="card">
-                <div class="car-boy">
-                    <h2>
+                <div class="card-body">
+                    <h2 class="name">
                         <a class="card-title" href="{{url_for('items.item', item_id=item.id)}}">{{item.itemName}}</a>
                     </h2>
-                    <h4>${{item.price}}</h4>
-                    <p>Published on: {{item.date.strftime('%Y - %m - %d')}}</p>
+                    <h4 class="price">${{item.price}}</h4>
+                    <p class="date" >Published on: {{item.date.strftime('%Y - %m - %d')}}</p>
                     <a href="{{url_for('users.user_items', username=item.author.username)}}">By: {{item.author.username}}</a><br>
-                    <a class="btn btn-primary" href="{{url_for('items.item', item_id=item.id)}}">See Item Details</a>
+                    <a class="details-btn" href="{{url_for('items.item', item_id=item.id)}}">See Item Details</a>
                 </div>
             </div>
         {% endfor %}
     </div>
 
     <nav aria-label="Page Navigation example">
-        <ul class="pagination justify-content-center">
+        <ul class="pagination">
             {% for page_num in items.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
                 {% if items.page == page_num %}
-                <li class="page-item disabled">
+                <li class="page-item">
                     <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
                 </li>
                 {% else %}
