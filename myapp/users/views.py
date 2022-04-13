@@ -77,5 +77,5 @@ def account():
 def user_items(username):
     page = request.args.get('page', 1, type=int)
     user = User.query.filter_by(username=username).first_or_404()
-    items = Item.query.filter_by(author=user).order_by(Item.date.desc()).paginate(page=page, per_page=5)
+    items = Item.query.filter_by(author=user).order_by(Item.date.desc()).paginate(page=page, per_page=16)
     return render_template('user_items.html', items=items, user=user)
