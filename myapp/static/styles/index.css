@@ -31,6 +31,26 @@ body {
   gap: 10px;
 }
 
+.card {
+  border: 2px solid rgb(211, 190, 190);
+  margin: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+}
+
 .card-body {
   text-align: center;
+}
+
+.card-title {
+  text-decoration: none; 
+}
+
+.author {
+  text-decoration: none;
+}
+
+.details-btn {
+  text-decoration: none;
 }
