@@ -1,13 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-   
-<form method="POST">
-    {{form.hidden_tag()}}
-    {{form.email.label}}{{form.email}}<br>
-    {{form.username.label}}{{form.username}}<br>
-    {{form.country.label}}{{form.country}}<br>
-    {{form.password.label}}{{form.password}}<br>
-    {{form.pass_confirm.label}}{{form.pass_confirm}}<br>
-    {{form.submit()}}
-</form>
+
+<link rel="stylesheet" href="{{url_for('static', filename='./styles/registration.css')}}" />
+
+<div class="form-container">
+    
+    <form class="register" method="POST">
+        <div class="item">
+            <h2 class="h2">Register a New Account</h2>
+        </div>
+        {{form.hidden_tag()}}
+        {{form.email.label(class_="email-label")}}{{form.email(class_="email-input")}}<br>
+        {{form.username.label(class_="username-label")}}{{form.username(class_="username-input")}}<br>
+        {{form.country.label(class_="country-label")}}{{form.country(class_="country-input")}}<br>
+        {{form.password.label(class_="password-label")}}{{form.password(class_="password-input")}}<br>
+        {{form.pass_confirm.label(class_="passwordconf-label")}}{{form.pass_confirm(class_="passwordconf-input")}}<br>
+        {{form.submit()}}
+    </form>
+
+</div>
 {% endblock %}
