@@ -42,8 +42,8 @@ form {
   background-repeat: no-repeat;
   border-radius: 2px;
   margin-left: 20px;
+  max-width: 100%;
   height: auto;
-  width: 500px;
   justify-content: center;
   align-items: center;
 }

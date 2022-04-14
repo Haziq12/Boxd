@@ -19,6 +19,7 @@
                     <a class="author" href="{{url_for('users.user_items', username=item.author.username)}}">By: {{item.author.username}}</a><br>
                     <p class="date" >{{item.date.strftime('%Y - %m - %d')}}</p>
                     <a class="details-btn" href="{{url_for('items.item', item_id=item.id)}}">See Item Details</a>
+                    <img src="../static/images/favicon1.ico" alt="No Picture">
                 </div>
             </div>
             {% endfor %}

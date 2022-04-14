@@ -38,7 +38,7 @@ h1 {
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 20px;
-  background-color: #f09b9b;
+  background-color: #000000;
   border-radius: 10px;
 }
 
@@ -50,6 +50,11 @@ h1 {
 .card-title {
   text-decoration: none; 
   color: white;
+  font-size: 20px;
+}
+
+.price {
+  font-size: 15px;
 }
 
 .author {
@@ -60,6 +65,7 @@ h1 {
 .details-btn {
   text-decoration: none;
   color: white;
+  display: block;
 }
 
 .date {
@@ -70,7 +76,7 @@ h1 {
   background-image: 
   url(banner2.png);
   height: 350px;
-  width: 100%;
+  max-width: 100%;
   margin-top: 0px;
 }
 
@@ -91,4 +97,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+img {
+  max-width: 90px;
+  max-height: 90px;
+  margin-top: 5px;
 }
