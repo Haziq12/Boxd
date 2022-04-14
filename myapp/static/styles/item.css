@@ -12,11 +12,16 @@
 .container > main{
   grid-area: second;
   margin-left: 20px;
+  margin-top: 20px;
+  text-align: left;
 }
 
 .container >  article{
   grid-area: fourth;
   margin-left: 20px;
+  width: 500px;
+  font-size: 15px;
+  text-align: left;
 }
 
 section {
@@ -29,12 +34,20 @@ form {
 }
 
 .image {
+  margin-top: 20px;
   grid-area: first;
   background-image: 
   url(laptop.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
   border-radius: 2px;
   margin-left: 20px;
-  /* height: auto;
-  width: auto; */
-  margin-top: 0px;
+  height: auto;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemName {
+  font-size: 35px;
 }

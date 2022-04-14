@@ -1,11 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-   
-<form method="POST">
-    {{form.hidden_tag()}}
-    {{form.email.label}}{{form.email}}<br>
-    {{form.password.label}}{{form.password}}<br>
-    {{form.submit()}}
 
-</form>
+<link rel="stylesheet" href="{{url_for('static', filename='./styles/login.css')}}" />
+
+<div class="form-container">
+    
+    <form class="login" method="POST">
+        <div class="item">
+            <h2 class="log-in">Log in</h2>
+        </div>
+        {{form.hidden_tag()}}
+        {{form.email.label(class_="email-label")}}{{form.email(class_="email-input")}}<br>
+        {{form.password.label(class_="password-label")}}{{form.password(class_="password-input")}}<br>
+        {{form.submit()}}
+    </form>
+
+</div>
+
 {% endblock %}
