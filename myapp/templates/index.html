@@ -2,13 +2,15 @@
 {% block content %}
 <link rel="stylesheet" href="{{url_for('static', filename='./styles/index.css')}}" />
 
-<div class="banner">
-    <div class="heading">
-        <img class="banner-img" src="../static/images/favicon2.ico" alt="No Picture">
-        <img class="banner-img-1" src="../static/images/fotos2.png" alt="No Picture">
-        <h1 class="banner-heading">The New Way To Marketplace.</h1>
+<header class="header">
+    <div class="banner">
+        <div class="heading">
+            <img class="banner-img" src="../static/images/favicon2.ico" alt="No Picture">
+            <img class="banner-img-1" src="../static/images/fotos2.png" alt="No Picture">
+            <h1 class="banner-heading">The New Way To Marketplace.</h1>
+        </div>
     </div>
-</div>
+</header>
 
     <section class="card-layout">
         {% for item in items.items %}
