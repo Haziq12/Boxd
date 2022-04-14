@@ -19,11 +19,13 @@ body {
   margin: 0;
 }
 
-h1 {
-  margin: 0px;
-}
 .heading {
   text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr; */
+  grid-template-areas: "one two three three";
+  
 }
 
 .card-layout {
@@ -75,11 +77,10 @@ h1 {
 }
 
 .banner {
-  background-image: 
-  url(banner2.png);
-  height: 350px;
-  max-width: 100%;
-  margin-top: 0px;
+  border-radius: 0px;
+  background: white;
+  box-shadow:  18px 18px 33px #a681d4,
+             -18px -18px 33px #d0a1ff;
 }
 
 .page-item {
@@ -104,8 +105,28 @@ h1 {
   align-items: center;
 }
 
-img {
+.card-img {
   max-width: 90px;
   max-height: 90px;
   margin-top: 5px;
+}
+
+.banner-img {
+  max-width: 300px;
+  max-height: 300px;
+  grid-area: one;
+}
+
+.banner-heading {
+  margin: 0px;
+  color: black;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  grid-area: one;
+}
+
+.banner-img-1 {
+  max-width: 1000px;
+  max-height: 600px;
+  grid-area: three;
 }
