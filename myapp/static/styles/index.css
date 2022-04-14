@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: rgb(245, 229, 229);
+  background: linear-gradient(to right, #9847d9, #db33cd);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
