@@ -5,23 +5,36 @@
   gap: 0px 0px;
   grid-template-areas:
     "first second"
-    "third fourth"
-    "fifth sixth";
+    "first fourth"
+    "first sixth";
 }
 
 .container > main{
   grid-area: second;
+  margin-left: 20px;
 }
 
 .container >  article{
   grid-area: fourth;
+  margin-left: 20px;
 }
 
 section {
   grid-area: sixth;
+  margin-left: 20px;
 }
 
 form {
   display: inline;
 }
 
+.image {
+  grid-area: first;
+  background-image: 
+  url(laptop.jpg);
+  border-radius: 2px;
+  margin-left: 20px;
+  /* height: auto;
+  width: auto; */
+  margin-top: 0px;
+}

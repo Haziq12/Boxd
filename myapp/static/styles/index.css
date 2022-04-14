@@ -38,24 +38,28 @@ h1 {
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 20px;
-  background-color: #a57373;
+  background-color: #f09b9b;
   border-radius: 10px;
 }
 
 .card-body {
   text-align: center;
+  color: white;
 }
 
 .card-title {
   text-decoration: none; 
+  color: white;
 }
 
 .author {
   text-decoration: none;
+  color: white;
 }
 
 .details-btn {
   text-decoration: none;
+  color: white;
 }
 
 .date {
