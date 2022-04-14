@@ -1,0 +1,34 @@
+.container {
+  margin-top: 90px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "one two three"
+    "one two three"
+    "one two three";
+}
+
+.wrap {
+  grid-area: two;
+  text-align: left;
+}
+
+.mission {
+  font-size: 40px;
+}
+
+.left-image {
+  grid-area: one;
+  max-width: 90%;
+  max-height: auto;
+  align-items: center;
+}
+
+.right-image {
+    grid-area: three;
+    max-width: 90%;
+    max-height: auto;
+    align-items: center;
+}
