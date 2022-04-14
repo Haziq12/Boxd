@@ -87,6 +87,7 @@ body {
 
 .banner {
   background: white;
+  overflow: hidden;
 }
 
 .page-item {
@@ -134,4 +135,5 @@ body {
   max-width: 1000px;
   max-height: 600px;
   grid-area: three;
+  position: relative;
 }
