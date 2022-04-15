@@ -45,10 +45,48 @@ form {
   margin-left: 20px;
   max-width: 100%;
   height: auto;
-  justify-content: center;
-  align-items: center;
 }
 
 .itemName {
   font-size: 35px;
+}
+
+.word {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+.update-btn {
+  display:inline-block;
+  padding: 8px 10px;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.15em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  text-transform:uppercase;
+  font-weight:400;
+  color:#FFFFFF;
+  background-color:#3369ff;
+  box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+  text-align:center;
+  position:relative;
+}
+
+.delete-btn {
+  display:inline-block;
+  padding: 8px 10px;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.15em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  text-transform:uppercase;
+  font-weight:400;
+  color:#FFFFFF;
+  background-color:#3369ff;
+  box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+  text-align:center;
+  position:relative;
 }
