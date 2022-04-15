@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container">
-      <form class="form-group" method="POST">
+
+<link rel="stylesheet" href="{{url_for('static', filename='./styles/create_item.css')}}" />
+
+    <div class="create-container">
+      <form class="create-form" method="POST">
           {{form.hidden_tag()}}
 
           <div class="form-group">
