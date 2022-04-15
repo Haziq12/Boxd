@@ -31,6 +31,9 @@ body {
     "one two three three"
     "four four three three";
   align-items: center;
+
+border-radius: 0px;
+background: #968ce1;
 }
 
 .card-layout {

@@ -1,3 +1,5 @@
+
+
 .container {  
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -7,6 +9,16 @@
     "first second"
     "first fourth"
     "first sixth";
+    
+background: rgba(99, 58, 232, 0.45);
+border-radius: 0px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.4px);
+-webkit-backdrop-filter: blur(8.4px);
+border: 1px solid rgba(99, 58, 232, 0.15);
+
+    /* background: rgb(181,136,236);
+background: linear-gradient(180deg, rgba(181,136,236,1) 0%, rgba(255,255,255,1) 67%); */
 }
 
 .container > main{
@@ -23,6 +35,13 @@
   text-align: left;
   font-size: 15px;
   line-height: 28px;
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(8.3px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  padding: 10px;
 }
 
 section {
@@ -38,7 +57,7 @@ form {
   margin-top: 20px;
   grid-area: first;
   background-image: 
-  url(laptop.jpg);
+  url(forSale1.jpeg);
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 2px;
@@ -48,7 +67,7 @@ form {
 }
 
 .itemName {
-  font-size: 35px;
+  font-size: 40px;
 }
 
 .word {
@@ -90,3 +109,20 @@ form {
   text-align:center;
   position:relative;
 }
+
+.name {
+  font-size: 18px;
+}
+
+.country, .date {
+  font-size: 15px;
+}
+
+.category, .price, .size {
+  font-size: 15px;
+}
+
+.word {
+  font-size: 20px;
+}
+
