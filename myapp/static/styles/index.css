@@ -151,6 +151,10 @@ background: whitesmoke;
 
 .banner-heading {
   grid-area: four;
+  color: #b588ec;
+  position: relative;
+  bottom: 100px;
+  margin-left: 20px ;
 }
 
 .banner-img-1 {
