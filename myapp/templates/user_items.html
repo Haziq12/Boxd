@@ -1,27 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='./styles/user_items.css')}}" />
+
     <div class="container">
-        <div class="jumbotron">
+        <div class="welcome">
             <div align="center">
-                <h1>Welcome to {{user.username}} page!</h1>
+                <h1 class="user">Welcome to {{user.username}} page!</h1>
             </div>
         </div>
-     {% for item in items.items %}
-    <h2>
-        <a href="{{url_for('items.item', item_id=item.id)}}">{{item.itemName}}</a>
-    </h2>
-    <p>{{item.price}}</p>
-    <p>{{item.condition}}</p>
-    <p>{{item.size}}</p>
-    <br>
-    <p>{{item.itemDescription}}</p>
-    <br>
-    By: <a href="{{url_for('users.user_items', username=item.author.username)}}">{{item.author.username}}</a>
-    <p>{{item.contactInfo}}</p>
-    <p class="text-muted">
-      Created On: {{item.date.strftime("%y-%m-%d")}}
-  </p>
-    {% endfor %}
+
+        <section class="card-layout">
+            {% for item in items.items %}
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="name">
+                            <a class="card-title" href="{{url_for('items.item', item_id=item.id)}}">{{item.itemName}}</a>
+                        </h2>
+                        <h4 class="price">${{item.price}}</h4>
+                        <a class="author" href="{{url_for('users.user_items', username=item.author.username)}}">By: {{item.author.username}}</a><br>
+                        <p class="date" >{{item.date.strftime('%Y - %m - %d')}}</p>
+                        <a class="details-btn" href="{{url_for('items.item', item_id=item.id)}}">See Item Details</a>
+                        <img class="card-img" src="../static/images/favicon1.ico" alt="No Picture">
+                    </div>
+                </div>
+                {% endfor %}
+        </section>
+
     </div>
 
     <nav aria-label="Page Navigation example">

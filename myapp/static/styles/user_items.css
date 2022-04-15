@@ -1,0 +1,79 @@
+.user {
+  font-size: 35px;
+}
+
+.card-layout {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.card {
+  margin: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  background: rgba( 61, 70, 152, 0.25 );
+  box-shadow: 0 6px 20px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 6px );
+  -webkit-backdrop-filter: blur( 6px );
+  border-radius: 10px;
+  transition: all 0.25s;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.2);
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  text-decoration: none; 
+  font-size: 20px;
+}
+
+.price {
+  font-size: 15px;
+}
+
+.author {
+  text-decoration: none;
+}
+
+.date {
+  margin: 0;
+}
+
+
+.details-btn {
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+
+.details-btn::after {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 0px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.details-btn:hover::after {
+  content: "\2192";
+  width: 100%;
+}
+
+.card-img {
+  max-width: 90px;
+  max-height: 90px;
+  margin-top: 5px;
+}

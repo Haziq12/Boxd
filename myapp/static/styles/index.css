@@ -13,8 +13,6 @@ html {
 }
 
 body {
-  
-  /* background: #bf96f2; */
   background: rgb(238,174,202);
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(65,134,214,1) 100%);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -53,10 +51,6 @@ body {
   -webkit-backdrop-filter: blur( 6px );
   border-radius: 10px;
   transition: all 0.25s;
-  /* border-radius: 15px;
-  background: #b588ec;
-  box-shadow:  10px 10px 0px #a179d2,
-             -10px -10px 0px #c997ff; */
 }
 
 .card:hover {
@@ -149,12 +143,10 @@ body {
   max-width: 300px;
   max-height: 300px;
   grid-area: one;
-  /* justify-content: center; */
   align-content: center;
 }
 
 .banner-heading {
- 
   grid-area: four;
 }
 
