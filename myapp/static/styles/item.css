@@ -16,9 +16,6 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(8.4px);
 -webkit-backdrop-filter: blur(8.4px);
 border: 1px solid rgba(99, 58, 232, 0.15);
-
-    /* background: rgb(181,136,236);
-background: linear-gradient(180deg, rgba(181,136,236,1) 0%, rgba(255,255,255,1) 67%); */
 }
 
 .container > main{
